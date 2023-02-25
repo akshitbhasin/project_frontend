@@ -1,15 +1,15 @@
 import { Image } from "./image";
 import React from "react";
 
-export const Login = (props) => {
+export const Signup = (props) => {
 
   const handleSubmit = () => { };
   const handleChange = () => { };
   return (
-    <div id="login" className="text-center">
+    <div id="signup" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Login</h2>
+          <h2>Signup</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
             dapibus leonec.
@@ -20,7 +20,6 @@ export const Login = (props) => {
             <form name="sentMessage" validate onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-4">
-                    <p>1</p>
                   </div>
                   <div className="col-md-2">
                     <div className="form-group">
@@ -51,12 +50,10 @@ export const Login = (props) => {
                     </div>
                   </div>
                   <div className="col-md-4">
-                    <p>2</p>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-4">
-                    <p>1</p>
                   </div>
                   <div className="form-group col-md-4">
                       <input
@@ -71,12 +68,10 @@ export const Login = (props) => {
                       <p className="help-block text-danger"></p>
                     </div>
                   <div className="col-md-4">
-                    <p>2</p>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-4">
-                    <p>1</p>
                   </div>
                   <div className="form-group col-md-4">
                       <input
@@ -91,7 +86,6 @@ export const Login = (props) => {
                       <p className="help-block text-danger"></p>
                     </div>
                   <div className="col-md-4">
-                    <p>2</p>
                   </div>
                 </div>
                 <div className="row">
@@ -99,7 +93,7 @@ export const Login = (props) => {
                 <div id="success"></div>
                 <p ><a href="#contact" className="linktologin" style={{"color": "white"}}>Already Have An Account?</a></p>
                 <button type="submit" className="btn btn-custom btn-lg">
-                  Login
+                  Sign Up
                 </button>
                 </div>
                 </div>
@@ -110,4 +104,3 @@ export const Login = (props) => {
     </div>
   );
 };
-{/*  */}
