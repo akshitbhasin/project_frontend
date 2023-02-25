@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   experimentalStyled,
   useMediaQuery,
   Container,
   Box,
 } from "@material-ui/core";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Footer/Footer";
@@ -32,10 +32,21 @@ const PageWrapper = experimentalStyled("div")(({ theme }) => ({
 }));
 
 const FullLayout = () => {
-  //
+  const [authenticatedToken, setAuthenticatedToken] = useState(null);
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const navigate = useNavigate();
+  useEffect(() => {
+    const loggedUserDetails = JSON.parse(localStorage.getItem("loggedInDetails"));
+    if(loggedUserDetails!=null && loggedUserDetails.isLoggedIn){
+      setAuthenticatedToken(loggedUserDetails.token);
+    }else{
+        navigate("/");
+    } 
+  }, []);
+  
+  console.log(authenticatedToken);
   return (
     <MainWrapper>
       <Header

@@ -365,6 +365,20 @@ header .intro-text {
   position: relative;
   margin: 0;
 }
+#login {
+  padding: 100px 0;
+  color: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+}
+.login-item {
+  margin: 1px -15px 0 -14px;
+  padding: 0;
+}
+.login-item .hover-bg {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
 .section-title h2{
   color: rgba(255, 255, 255, 0.75);
 }
@@ -519,6 +533,15 @@ header .intro-text {
   border: 2px solid #fff;
 }
 #signup .btn-custom:hover {
+  color: #1f386e;
+  background: #fff;
+}
+#login .btn-custom {
+  margin: 5px 0;
+  background: transparent;
+  border: 2px solid #fff;
+}
+#login .btn-custom:hover {
   color: #1f386e;
   background: #fff;
 }

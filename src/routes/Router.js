@@ -1,5 +1,6 @@
 import { lazy } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router";
+
 import LandingPage from "../views/LandingPage/LandingPage.js";
 
 /****Layouts*****/
@@ -39,7 +40,7 @@ const ThemeRoutes = [
     path: "/",
     element: <FullLayout />,
     children: [
-      // { path: "/", element: <Navigate to="dashboards/dashboard1" /> },
+      { path: "/", element: <Navigate to="dashboards/dashboard1" /> },
       { path: "dashboard", exact: true, element: <Dashboard1 /> },
       { path: "tables/basic-table", element: <BasicTable /> },
       { path: "/form-layouts/form-layouts", element: <FormLayouts /> },
