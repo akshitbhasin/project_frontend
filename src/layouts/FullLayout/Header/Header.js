@@ -22,6 +22,7 @@ import {
 } from "@material-ui/core";
 
 import userimg from "../../../assets/images/users/user.jpg";
+import { useNavigate } from "react-router";
 
 const Header = (props) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -41,8 +42,18 @@ const Header = (props) => {
     setAnchorEl4(event.currentTarget);
   };
 
-  const handleClose4 = () => {
-    setAnchorEl4(null);
+  const handleClose4 = (event) => {
+    setAnchorEl4(event.currentTarget);
+  };
+
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    const loggedInDetails = JSON.parse(localStorage.getItem("loggedInDetails"));
+    loggedInDetails.isLoggedIn = false;
+    loggedInDetails.token = "null";
+    localStorage.removeItem("loggedInDetails");
+    //remove user data as well
+    navigate("/");
   };
 
   // 5
@@ -259,7 +270,7 @@ const Header = (props) => {
             </ListItemIcon>
             Settings
           </MenuItem>
-          <MenuItem onClick={handleClose4}>
+          <MenuItem onClick={handleLogout}>
             <ListItemIcon>
               <Logout fontSize="small" />
             </ListItemIcon>
