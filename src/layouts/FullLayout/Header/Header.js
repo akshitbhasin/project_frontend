@@ -39,11 +39,12 @@ const Header = (props) => {
   const [anchorEl4, setAnchorEl4] = React.useState(null);
 
   const handleClick4 = (event) => {
+
     setAnchorEl4(event.currentTarget);
   };
 
   const handleClose4 = (event) => {
-    setAnchorEl4(event.currentTarget);
+    setAnchorEl4(null);
   };
 
   const navigate = useNavigate();

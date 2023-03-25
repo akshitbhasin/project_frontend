@@ -30,7 +30,8 @@
     "web-vitals": "^1.1.1"
   },
   "devDependencies": {
-    "axios-mock-adapter": "^1.18.1"
+    "axios-mock-adapter": "^1.18.1",
+    "react-error-overlay": "^6.0.9"
   },
   "scripts": {
     "start": "react-scripts start",

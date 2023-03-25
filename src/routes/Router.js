@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { Navigate } from "react-router";
 
 import LandingPage from "../views/LandingPage/LandingPage.js";
+import Settings from "../views/Settings/Settings.js";
 
 /****Layouts*****/
 const FullLayout = lazy(() => import("../layouts/FullLayout/FullLayout.js"));
@@ -42,14 +43,15 @@ const ThemeRoutes = [
     children: [
       { path: "/", element: <Navigate to="dashboards/dashboard1" /> },
       { path: "dashboard", exact: true, element: <Dashboard1 /> },
-      { path: "tables/basic-table", element: <BasicTable /> },
-      { path: "/form-layouts/form-layouts", element: <FormLayouts /> },
-      { path: "/form-elements/autocomplete", element: <ExAutoComplete /> },
-      { path: "/form-elements/button", element: <ExButton /> },
-      { path: "/form-elements/checkbox", element: <ExCheckbox /> },
-      { path: "/form-elements/radio", element: <ExRadio /> },
-      { path: "/form-elements/slider", element: <ExSlider /> },
-      { path: "/form-elements/switch", element: <ExSwitch /> },
+      { path: "table", element: <BasicTable /> },
+      { path: "/form-layouts", element: <FormLayouts /> },
+      { path: "/autocomplete", element: <ExAutoComplete /> },
+      { path: "/button", element: <ExButton /> },
+      { path: "/checkbox", element: <ExCheckbox /> },
+      { path: "/radio", element: <ExRadio /> },
+      { path: "/slider", element: <ExSlider /> },
+      { path: "/switch", element: <ExSwitch /> },
+      { path: "/settings", element: <Settings/>}
     ],
   },
 

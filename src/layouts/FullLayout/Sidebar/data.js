@@ -8,53 +8,60 @@ import {
   SwitchLeftOutlined,
   DescriptionOutlined,
   AutoAwesomeMosaicOutlined,
+  Settings,
+
 } from "@material-ui/icons/";
 
 const Menuitems = [
   {
     title: "Dashboard",
     icon: DashboardOutlined,
-    href: "/dashboards/dashboard1",
+    href: "/dashboard",
   },
   {
     title: "Autocomplete",
     icon: AddToPhotosOutlined,
-    href: "/form-elements/autocomplete",
+    href: "/autocomplete",
   },
   {
     title: "Buttons",
     icon: AspectRatioOutlined,
-    href: "/form-elements/button",
+    href: "/button",
   },
   {
     title: "Checkbox",
     icon: AssignmentTurnedInOutlined,
-    href: "/form-elements/checkbox",
+    href: "/checkbox",
   },
   {
     title: "Radio",
     icon: AlbumOutlined,
-    href: "/form-elements/radio",
+    href: "/radio",
   },
   {
     title: "Slider",
     icon: SwitchCameraOutlined,
-    href: "/form-elements/slider",
+    href: "/slider",
   },
   {
     title: "Switch",
     icon: SwitchLeftOutlined,
-    href: "/form-elements/switch",
+    href: "/switch",
   },
   {
     title: "Form",
     icon: DescriptionOutlined,
-    href: "/form-layouts/form-layouts",
+    href: "/form-layouts",
   },
   {
     title: "Table",
     icon: AutoAwesomeMosaicOutlined,
-    href: "/tables/basic-table",
+    href: "/table",
+  },
+  {
+    title: "Settings",
+    icon: Settings,
+    href: "/settings",
   },
 ];
 
